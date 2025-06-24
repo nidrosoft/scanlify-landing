@@ -15,8 +15,8 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-    title: "Bento Cards: Landing",
-    description: "Minimal to-do list app UI design kit + landing page",
+    title: "Scanlify: Business Card Scanning & CRM",
+    description: "Scanlify is the modern way to scan business cards, manage contacts, and run campaigns. Effortless CRM for individuals, professionals, and teams.",
 };
 
 export default function RootLayout({
@@ -28,16 +28,16 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 {/* Description no longer than 155 characters */}
-                <meta name="description" content="Bento Cards: Scanlify" />
+                <meta name="description" content="Scanlify: Business Card Scanning & CRM" />
                 {/* Product Name */}
-                <meta name="product-name" content="Bento Cards: Scanlify" />
+                <meta name="product-name" content="Scanlify" />
                 {/* Twitter Card data */}
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:site" content="@ui8" />
-                <meta name="twitter:title" content="Bento Cards: Scanlify" />
+                <meta name="twitter:title" content="Scanlify: Business Card Scanning & CRM" />
                 <meta
                     name="twitter:description"
-                    content="Minimal to-do list app UI design kit + landing page"
+                    content="Scanlify is the modern way to scan business cards, manage contacts, and run campaigns. Effortless CRM for individuals, professionals, and teams."
                 />
                 <meta name="twitter:creator" content="@ui8" />
                 {/* Twitter Summary card images must be at least 120x120px */}
@@ -47,11 +47,11 @@ export default function RootLayout({
                 />
 
                 {/* Open Graph data for Facebook */}
-                <meta property="og:title" content="Bento Cards: Scanlify" />
-                <meta property="og:type" content="Article" />
+                <meta property="og:title" content="Scanlify: Business Card Scanning & CRM" />
+                <meta property="og:type" content="website" />
                 <meta
                     property="og:url"
-                    content="https://ui8.net/ui8/products/bento-cards-scanlify"
+                    content="https://scanlify.com/"
                 />
                 <meta
                     property="og:image"
@@ -59,19 +59,19 @@ export default function RootLayout({
                 />
                 <meta
                     property="og:description"
-                    content="Minimal to-do list app UI design kit + landing page"
+                    content="Scanlify is the modern way to scan business cards, manage contacts, and run campaigns. Effortless CRM for individuals, professionals, and teams."
                 />
                 <meta
                     property="og:site_name"
-                    content="Bento Cards: Scanlify"
+                    content="Scanlify"
                 />
                 <meta property="fb:admins" content="132951670226590" />
 
                 {/* Open Graph data for LinkedIn */}
-                <meta property="og:title" content="Bento Cards: Scanlify" />
+                <meta property="og:title" content="Scanlify: Business Card Scanning & CRM" />
                 <meta
                     property="og:url"
-                    content="https://ui8.net/ui8/products/bento-cards-scanlify"
+                    content="https://scanlify.com/"
                 />
                 <meta
                     property="og:image"
@@ -79,14 +79,14 @@ export default function RootLayout({
                 />
                 <meta
                     property="og:description"
-                    content="Minimal to-do list app UI design kit + landing page"
+                    content="Scanlify is the modern way to scan business cards, manage contacts, and run campaigns. Effortless CRM for individuals, professionals, and teams."
                 />
 
                 {/* Open Graph data for Pinterest */}
-                <meta property="og:title" content="Bento Cards: Scanlify" />
+                <meta property="og:title" content="Scanlify: Business Card Scanning & CRM" />
                 <meta
                     property="og:url"
-                    content="https://ui8.net/ui8/products/bento-cards-scanlify"
+                    content="https://scanlify.com/"
                 />
                 <meta
                     property="og:image"
@@ -94,7 +94,7 @@ export default function RootLayout({
                 />
                 <meta
                     property="og:description"
-                    content="Minimal to-do list app UI design kit + landing page"
+                    content="Scanlify is the modern way to scan business cards, manage contacts, and run campaigns. Effortless CRM for individuals, professionals, and teams."
                 />
             </head>
             <body className={cn(rubik.className, hostGrotesk.className)}>
