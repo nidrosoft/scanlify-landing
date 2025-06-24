@@ -1,37 +1,20 @@
 export const tasks = [
     {
-        id: "0",
-        title: "Promote Bento Cards v.2",
-        isActions: true,
-        isHover: true,
-        isSelected: false,
+        title: "Instant Document Scanning",
+        description: "Snap and digitize any paper in seconds using your phone or desktop.",
+        icon: "scanner",
+        cta: "Try Now"
     },
     {
-        id: "1",
-        title: "Release Bento Cards for Framer",
-        isActions: false,
-        isHover: true,
-        isSelected: false,
+        title: "AI Text Recognition",
+        description: "Extract and copy text from images and PDFs with one click, powered by advanced AI.",
+        icon: "ai",
+        cta: "See Demo"
     },
     {
-        id: "2",
-        title: "Bento Cards: UI Components",
-        isActions: false,
-        isHover: false,
-        isSelected: false,
-    },
-    {
-        id: "3",
-        title: "Removr Illustrations",
-        isActions: false,
-        isHover: false,
-        isSelected: true,
-    },
-    {
-        id: "4",
-        title: "Bento Cards v. 4",
-        isActions: false,
-        isHover: false,
-        isSelected: false,
-    },
+        title: "Smart Organization & Sharing",
+        description: "Auto-tag, search, and share your scans securely in the cloud.",
+        icon: "cloud",
+        cta: "Get Started"
+    }
 ];

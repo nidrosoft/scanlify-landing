@@ -4,18 +4,19 @@ import Image from "@/components/Image";
 import CompletedTasks from "@/components/CompletedTasks";
 import styles from "./Tasks.module.sass";
 
+type TaskItem = {
+    title: string;
+    description: string;
+    icon: string;
+    cta: string;
+};
+
 type TasksProps = {
     className?: string;
     classTooltip?: string;
     titleTooltip?: string;
     classFoot?: string;
-    items?: {
-        id: string;
-        title: string;
-        isActions: boolean;
-        isHover: boolean;
-        isSelected: boolean;
-    }[];
+    items?: TaskItem[];
     animation?: boolean;
     completed?: boolean;
 };
@@ -49,49 +50,17 @@ const Tasks = ({
             </div>
             {!completed ? (
                 <div className={styles.body}>
-                    {items?.map((item) => (
-                        <div
-                            className={cn(styles.task, {
-                                [styles.isActions]: item.isActions,
-                                [styles.isSelected]: item.isSelected,
-                                [styles.isHover]: item.isHover,
-                            })}
-                            key={item.id}
-                        >
+                    {items?.map((item, idx) => (
+                        <div className={styles.task} key={item.title + idx}>
                             <div className={styles.in}>
-                                <div className={styles.radio}></div>
-                                <div className={styles.title}>{item.title}</div>
-                                {item.isActions && (
-                                    <div className={styles.actions}>
-                                        <div className={styles.action}>
-                                            <Icon name="trash" />
-                                        </div>
-                                        <div className={styles.action}>
-                                            <Icon name="copy" />
-                                        </div>
-                                    </div>
-                                )}
-                                <div className={styles.drag}>
-                                    <Icon name="drag" />
+                                <div className={styles.iconTask}>
+                                    <Icon name={item.icon} />
                                 </div>
-                                {!item.isActions && item.isHover && (
-                                    <div className={styles.cursor}>
-                                        <Image
-                                            src="/images/cursor-1.svg"
-                                            width={17}
-                                            height={17}
-                                            alt=""
-                                        />
-                                        <div
-                                            className={cn(
-                                                classTooltip,
-                                                styles.tooltip
-                                            )}
-                                        >
-                                            {titleTooltip || "Kohaku"}
-                                        </div>
-                                    </div>
-                                )}
+                                <div className={styles.content}>
+                                    <div className={styles.title}>{item.title}</div>
+                                    <div className={styles.description}>{item.description}</div>
+                                </div>
+                                <button className={styles.cta}>{item.cta}</button>
                             </div>
                         </div>
                     ))}
