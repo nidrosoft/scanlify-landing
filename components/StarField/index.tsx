@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { useEffect, useState } from "react";
 import cn from "classnames";
 import styles from "./StarField.module.sass";
