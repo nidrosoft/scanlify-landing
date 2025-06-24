@@ -1,0 +1,55 @@
+export const pricing = [
+    {
+        id: "0",
+        title: "ScanlifyStart",
+        priceMonthly: 0,
+        priceAnnually: 0,
+        image: "/images/pricing-pic-1.png",
+        description: "Perfect for individuals or small businesses.",
+        options: [
+            "Scan and save up to 10 business cards",
+            "Up to 2 active campaigns",
+            "Basic contact management (edit, tag, search)",
+            "Mobile app access",
+            "Cross-device sync (1 device)",
+            "Export contacts (CSV)",
+            "Email support",
+        ],
+    },
+    {
+        id: "1",
+        title: "ScanlifyPro",
+        priceMonthly: 9,
+        priceAnnually: 108, // 9*12 for annual equivalent
+        image: "/images/pricing-pic-2.png",
+        description: "For professionals and growing businesses ",
+        options: [
+            "Unlimited business card scans",
+            "Unlimited campaigns",
+            "Advanced contact fields (custom fields, notes)",
+            "Smart contact deduplication",
+            "Campaign analytics & reporting",
+            "Multi-device sync (up to 3 devices)",
+            "Priority email support",
+            "Integrations (Google, Outlook, Zapier, etc.)",
+            "File attachments to contacts",
+        ],
+    },
+    {
+        id: "2",
+        title: "ScanlifyTeam",
+        priceMonthly: 14.99,
+        priceAnnually: 179.88, // 14.99*12 for annual equivalent
+        image: "/images/pricing-pic-3.png",
+        description: "For teams and organizations that need collaboration",
+        options: [
+            "Team collaboration contacts & campaigns",
+            "Role-based access & admin controls",
+            "Team activity feed & audit logs",
+            "Advanced security (2FA, SSO, data export)",
+            "API access for custom integrations",
+            "Dedicated account manager",
+            "Priority phone & chat support",
+        ],
+    },
+];

@@ -1,0 +1,62 @@
+@import @/styles/variables
+
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background: rgba(18, 18, 18, 0.85)
+    z-index: 1000
+    display: flex
+    align-items: center
+    justify-content: center
+    opacity: 1
+    transition: opacity .2s
+    pointer-events: all
+    &.open
+        opacity: 1
+        pointer-events: all
+
+.modal
+    position: relative
+    background: $n3
+    border-radius: 32px
+    box-shadow: 0 8px 48px rgba($n3, 0.24)
+    padding: 48px 32px 32px 32px
+    min-width: 340px
+    max-width: 95vw
+    max-height: 90vh
+    color: $text-primary
+    display: flex
+    flex-direction: column
+    align-items: center
+    animation: modal-fade-in .3s cubic-bezier(.4,0,.2,1)
+    h2, label, a
+        color: $text-primary !important
+    a
+        text-decoration: underline
+    font-family: "HostGrotesk", "Rubik", sans-serif
+
+@keyframes modal-fade-in
+    from
+        opacity: 0
+        transform: translateY(40px) scale(0.98)
+    to
+        opacity: 1
+        transform: translateY(0) scale(1)
+
+.confirmationIcon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 64px
+    height: 64px
+    border-radius: 50%
+    background: #1ecb7b
+    margin: 0 auto 24px auto
+    box-shadow: 0 2px 12px rgba(30,203,123,0.18)
+    svg
+        width: 32px
+        height: 32px
+        color: #fff 
