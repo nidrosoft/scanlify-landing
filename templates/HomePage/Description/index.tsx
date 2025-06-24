@@ -25,7 +25,7 @@ const Description = ({ onGetStarted }: DescriptionProps) => (
                             title="Get started"
                             onClick={onGetStarted}
                         />
-                        <div className={styles.version}>v1.0.1 – macOS 12+</div>
+                        <div className={styles.version}>IOS App Coming Soon</div>
                     </div>
                     <div className={styles.preview}>
                         <Image

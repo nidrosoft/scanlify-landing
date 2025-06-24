@@ -23,7 +23,7 @@ const Hero = ({ onGetStarted }: HeroProps) => (
                     title="Get started"
                     onClick={onGetStarted}
                 />
-                <div className={styles.version}>v1.0.1 – macOS 12+</div>
+                <div className={styles.version}>IOS App Coming Soon</div>
             </div>
             <Images />
             <div className={styles.foot}>
