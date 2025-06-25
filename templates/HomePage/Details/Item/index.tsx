@@ -7,7 +7,7 @@ type ItemProps = {
     className?: string;
     classOvarlay?: string;
     title: string;
-    content: string;
+    content: React.ReactNode;
     icon: string;
     gradient: string;
     children: React.ReactNode;

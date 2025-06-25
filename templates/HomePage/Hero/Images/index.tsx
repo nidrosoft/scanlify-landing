@@ -1,6 +1,7 @@
 import Groups from "@/components/Groups";
 import Tasks from "@/components/Tasks";
 import StarField from "@/components/StarField";
+import BentoHero from "../../../../Bento/components/BentoHero";
 import styles from "./Images.module.sass";
 
 import { groups1, groups2 } from "@/mocks/groups";
@@ -28,7 +29,7 @@ const Images = ({}: ImagesProps) => (
             <div className={styles.center}>
                 <div className={styles.overlay}></div>
                 <div className={styles.circle}></div>
-                <Tasks className={styles.tasks} items={tasks} animation />
+                <Tasks className={styles.tasks} BentoComponent={BentoHero} animation />
             </div>
         </div>
         <div className={styles.stars}>

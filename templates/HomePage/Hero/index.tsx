@@ -15,9 +15,8 @@ const Hero = ({ onGetStarted }: HeroProps) => (
                 <h1 className={cn("h1", styles.title)}>
                     Your business, streamlined
                 </h1>
-                <div className={styles.info}>
-                    Scan, organize, and grow your business contacts effortlessly
-                </div>
+                <div className={styles.subheading}>Scan, organize, and grow your business contacts effortlessly</div>
+
                 <Button
                     className={styles.button}
                     title="Get started"

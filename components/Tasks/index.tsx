@@ -3,6 +3,7 @@ import Icon from "@/components/Icon";
 import Image from "@/components/Image";
 import CompletedTasks from "@/components/CompletedTasks";
 import styles from "./Tasks.module.sass";
+import Bento32 from "../../Bento/components/Bento32";
 
 type TasksProps = {
     className?: string;
@@ -18,6 +19,7 @@ type TasksProps = {
     }[];
     animation?: boolean;
     completed?: boolean;
+    BentoComponent?: React.ComponentType;
 };
 
 const Tasks = ({
@@ -28,6 +30,7 @@ const Tasks = ({
     items,
     animation,
     completed,
+    BentoComponent = Bento32,
 }: TasksProps) => (
     <div
         className={cn(className, styles.tasks, {
@@ -41,7 +44,7 @@ const Tasks = ({
                     <div className={styles.icon}>
                         <Icon name="arrow-left" />
                     </div>
-                    {completed ? "Simple list" : "Upcoming"}
+                    {completed ? "All Set!" : "Scanning..."}
                 </div>
                 <div className={styles.icon}>
                     <Icon name="plus" />
@@ -49,52 +52,7 @@ const Tasks = ({
             </div>
             {!completed ? (
                 <div className={styles.body}>
-                    {items?.map((item) => (
-                        <div
-                            className={cn(styles.task, {
-                                [styles.isActions]: item.isActions,
-                                [styles.isSelected]: item.isSelected,
-                                [styles.isHover]: item.isHover,
-                            })}
-                            key={item.id}
-                        >
-                            <div className={styles.in}>
-                                <div className={styles.radio}></div>
-                                <div className={styles.title}>{item.title}</div>
-                                {item.isActions && (
-                                    <div className={styles.actions}>
-                                        <div className={styles.action}>
-                                            <Icon name="trash" />
-                                        </div>
-                                        <div className={styles.action}>
-                                            <Icon name="copy" />
-                                        </div>
-                                    </div>
-                                )}
-                                <div className={styles.drag}>
-                                    <Icon name="drag" />
-                                </div>
-                                {!item.isActions && item.isHover && (
-                                    <div className={styles.cursor}>
-                                        <Image
-                                            src="/images/cursor-1.svg"
-                                            width={17}
-                                            height={17}
-                                            alt=""
-                                        />
-                                        <div
-                                            className={cn(
-                                                classTooltip,
-                                                styles.tooltip
-                                            )}
-                                        >
-                                            {titleTooltip || "Kohaku"}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    ))}
+                    <BentoComponent />
                 </div>
             ) : (
                 <div className={styles.wrap}>
@@ -119,7 +77,7 @@ const Tasks = ({
                         />
                     </div>
                     <div className={styles.result}>
-                        completed<span>{completed ? "8/8" : "1/5"}</span>
+                        Cards Scanned<span>{completed ? "8/8" : "62/100"}</span>
                     </div>
                 </div>
                 <div className={styles.icon}>

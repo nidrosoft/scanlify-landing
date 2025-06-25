@@ -1,4 +1,5 @@
 import Tasks from "@/components/Tasks";
+import BentoFeature2 from "../../../../Bento/components/BentoFeature2";
 import styles from "./Illustration2.module.sass";
 
 import { tasks } from "@/mocks/tasks";
@@ -12,7 +13,7 @@ const Illustration2 = ({}: Illustration2Props) => (
             classFoot={styles.foot}
             classTooltip={styles.tooltip}
             titleTooltip="Moyo Shiro"
-            items={tasks}
+            BentoComponent={BentoFeature2}
             animation
         />
     </div>
