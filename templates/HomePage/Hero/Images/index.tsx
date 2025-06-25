@@ -1,7 +1,7 @@
 import Groups from "@/components/Groups";
 import Tasks from "@/components/Tasks";
 import StarField from "@/components/StarField";
-import BentoHero from "../../../../Bento/components/BentoHero";
+import BentoHero from "@/components/BentoHero";
 import styles from "./Images.module.sass";
 
 import { groups1, groups2 } from "@/mocks/groups";
