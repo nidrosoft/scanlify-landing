@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { default as NextImage, ImageProps } from "next/image";
-import cn from "classnames";
-import styles from "./Image.module.sass";
 
 const Image = ({ className, ...props }: ImageProps) => {
-    const [loaded, setLoaded] = useState(false);
+    const [loaded, setLoaded] = useState<boolean>(false);
 
     return (
         <NextImage
-            className={cn(styles.image, { [styles.loaded]: loaded }, className)}
+            className={`inline-block align-top opacity-0 transition-opacity ${
+                loaded && "opacity-100"
+            } ${className || ""}`}
             onLoad={() => setLoaded(true)}
             {...props}
         />
