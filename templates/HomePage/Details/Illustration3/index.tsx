@@ -1,5 +1,5 @@
 import Tasks from "@/components/Tasks";
-import BentoFeature3 from "../../../../Bento/components/BentoFeature3";
+import BentoFeature3 from "@/components/BentoFeature3";
 import styles from "./Illustration3.module.sass";
 
 import { tasks } from "@/mocks/tasks";
