@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import localFont from "next/font/local";
 import { Providers } from "./providers";
+import { AuthRedirectHandler } from "../components/AuthRedirectHandler/AuthRedirectHandler";
 
 const hostGrotesk = localFont({ src: "./fonts/HostGrotesk-Bold.woff2" });
 
@@ -98,7 +99,10 @@ export default function RootLayout({
                 />
             </head>
             <body className={cn(rubik.className, hostGrotesk.className)}>
-                <Providers>{children}</Providers>
+                <Providers>
+                    {children}
+                    <AuthRedirectHandler />
+                </Providers>
             </body>
         </html>
     );

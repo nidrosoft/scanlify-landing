@@ -1,0 +1,91 @@
+@import "@/styles/variables"
+
+$primary: #353DF4  // Adding primary color
+$success: #10B981  // Adding success color
+$warning: #F59E0B  // Adding warning color
+$error: #EF4444    // Adding error color
+
+.toastContainer
+    position: fixed
+    z-index: 9999
+    padding: 16px
+    pointer-events: none
+    &--top-right
+        top: 0
+        right: 0
+    &--top-left
+        top: 0
+        left: 0
+    &--bottom-right
+        bottom: 0
+        right: 0
+    &--bottom-left
+        bottom: 0
+        left: 0
+
+.toast
+    position: relative
+    width: 100%
+    max-width: 380px
+    margin-bottom: 16px
+    background: $n3
+    border-radius: 12px
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15)
+    overflow: hidden
+    transform: translateY(20px)
+    opacity: 0
+    transition: transform 0.3s ease, opacity 0.3s ease
+    pointer-events: auto
+    
+    &--visible
+        transform: translateY(0)
+        opacity: 1
+    
+    &--info
+        border-left: 4px solid $primary
+        background: rgba($n3, 0.95)
+    
+    &--success
+        border-left: 4px solid $success
+        background: rgba($n3, 0.95)
+    
+    &--warning
+        border-left: 4px solid $warning
+        background: rgba($n3, 0.95)
+    
+    &--error
+        border-left: 4px solid $error
+        background: rgba($n3, 0.95)
+
+.toast__content
+    display: flex
+    align-items: flex-start
+    padding: 16px 20px
+
+.toast__message
+    flex: 1
+    margin: 0
+    color: $text-primary
+    font-size: 14px
+    line-height: 1.5
+
+.toast__close
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-left: 12px
+    padding: 4px
+    background: none
+    border: none
+    border-radius: 4px
+    color: $text-secondary
+    cursor: pointer
+    transition: color 0.2s, background-color 0.2s
+    
+    &:hover
+        color: $text-primary
+        background: rgba($n2, 0.1)
+    
+    &:focus
+        outline: none
+        box-shadow: 0 0 0 2px rgba($primary, 0.3)

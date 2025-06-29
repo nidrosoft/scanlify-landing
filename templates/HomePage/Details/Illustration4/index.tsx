@@ -1,5 +1,5 @@
 import Tasks from "@/components/Tasks";
-import BentoFeature4 from "@/components/BentoFeature4";
+import BentoFeature4 from "../../../../Bento/components/BentoFeature4";
 import styles from "./Illustration4.module.sass";
 
 type Illustration4Props = {};
