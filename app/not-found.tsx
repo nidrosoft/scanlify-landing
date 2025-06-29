@@ -9,8 +9,8 @@ export default function NotFound() {
         <div className={styles.errorCode}>404</div>
         <h1 className={styles.title}>Whoopsie Daisy! 🚀</h1>
         <p className={styles.description}>
-          Looks like you've taken a wrong turn at the digital crossroads! 🌍<br />
-          The page you're looking for has gone on a coffee break ☕ or decided to take an unexpected vacation 🏖️
+          Looks like you&apos;ve taken a wrong turn at the digital crossroads! 🌍<br />
+          The page you&apos;re looking for has gone on a coffee break ☕ or decided to take an unexpected vacation 🏖️
         </p>
         <div className={styles.emojiContainer}>
           <span>🔍</span>
