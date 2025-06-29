@@ -7,12 +7,6 @@ const nextConfig = {
       ...(config.resolve.alias || {}),
       '@': process.cwd(),
     };
-    if (!isServer) {
-      config.resolve.alias = {
-        ...(config.resolve.alias || {}),
-        swiper: path.resolve(__dirname, 'node_modules/swiper'),
-      };
-    }
     return config;
   },
 };
