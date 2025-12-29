@@ -7,11 +7,7 @@ import styles from "./Pricing.module.sass";
 
 import { pricing } from "@/mocks/pricing";
 
-type PricingProps = {
-    onGetStarted?: () => void;
-};
-
-const Pricing = ({ onGetStarted }: PricingProps) => {
+const Pricing = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const tabs = ["Billed annually", "Billed monthly"];
 
@@ -51,7 +47,6 @@ const Pricing = ({ onGetStarted }: PricingProps) => {
                             key={item.id}
                             index={index}
                             activeIndex={activeIndex}
-                            onGetStarted={onGetStarted}
                         />
                     ))}
                 </div>

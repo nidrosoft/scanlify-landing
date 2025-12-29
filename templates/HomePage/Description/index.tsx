@@ -4,11 +4,7 @@ import Button from "@/components/Button";
 import Image from "@/components/Image";
 import styles from "./Description.module.sass";
 
-type DescriptionProps = {
-    onGetStarted?: () => void;
-};
-
-const Description = ({ onGetStarted }: DescriptionProps) => (
+const Description = () => (
     <div className={cn("section", styles.description)}>
         <div className={cn("container", styles.container)}>
             <div className={styles.wrapper}>
@@ -20,11 +16,12 @@ const Description = ({ onGetStarted }: DescriptionProps) => (
                         <div className={styles.info}>
                             Scan, organize, and grow your business effortlessly.
                         </div>
-                        <Button
-                            className={styles.button}
-                            title="Get started"
-                            onClick={onGetStarted}
-                        />
+                        <a href="https://app.scanlify.io">
+                            <Button
+                                className={styles.button}
+                                title="Get started"
+                            />
+                        </a>
                         <div className={styles.version}>IOS App Coming Soon</div>
                     </div>
                     <div className={styles.preview}>

@@ -14,10 +14,9 @@ type ItemProps = {
         options: Array<string>;
     };
     index: number;
-    onGetStarted?: () => void;
 };
 
-const Item = ({ activeIndex, item, index, onGetStarted }: ItemProps) => (
+const Item = ({ activeIndex, item, index }: ItemProps) => (
     <div className={styles.item}>
         {index === 1 && (
             <div className={styles.gradient}>
@@ -38,7 +37,7 @@ const Item = ({ activeIndex, item, index, onGetStarted }: ItemProps) => (
                 <div className={styles.duration}>
                     {activeIndex === 0 ? "billed yearly" : "billed monthly"}
                 </div>
-                <Button className={styles.button} title="Get started" onClick={onGetStarted} />
+                <a href="https://app.scanlify.io"><Button className={styles.button} title="Get started" /></a>
             </div>
             <div className={styles.body}>
                 <div className={styles.info}>{item.description}</div>

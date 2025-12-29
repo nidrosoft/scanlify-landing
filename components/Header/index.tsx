@@ -6,11 +6,7 @@ import Image from "@/components/Image";
 import Button from "@/components/Button";
 import styles from "./Header.module.sass";
 
-type HeaderProps = {
-    onSignIn?: () => void;
-};
-
-const Header = ({ onSignIn }: HeaderProps) => {
+const Header = () => {
     const [headerStyle, setHeaderStyle] = useState<boolean>(false);
 
     useEffect(() => {
@@ -40,11 +36,12 @@ const Header = ({ onSignIn }: HeaderProps) => {
                             alt=""
                         />
                     </Link>
-                    <Button
-                        className={styles.button}
-                        title="Sign in"
-                        onClick={onSignIn}
-                    />
+                    <a href="https://app.scanlify.io">
+                        <Button
+                            className={styles.button}
+                            title="Sign in"
+                        />
+                    </a>
                     <div
                         className={cn(styles.overlay, {
                             [styles.visible]: headerStyle,

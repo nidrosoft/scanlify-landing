@@ -4,11 +4,7 @@ import Image from "@/components/Image";
 import Images from "./Images";
 import styles from "./Hero.module.sass";
 
-type HeroProps = {
-    onGetStarted?: () => void;
-};
-
-const Hero = ({ onGetStarted }: HeroProps) => (
+const Hero = () => (
     <div className={cn("section", styles.hero)}>
         <div className={cn("container", styles.container)}>
             <div className={styles.head}>
@@ -17,11 +13,12 @@ const Hero = ({ onGetStarted }: HeroProps) => (
                 </h1>
                 <div className={styles.subheading}>Scan, organize, and grow your business contacts effortlessly</div>
 
-                <Button
-                    className={styles.button}
-                    title="Get started"
-                    onClick={onGetStarted}
-                />
+                <a href="https://app.scanlify.io">
+                    <Button
+                        className={styles.button}
+                        title="Get started"
+                    />
+                </a>
                 <div className={styles.version}>IOS App Coming Soon</div>
             </div>
             <Images />
